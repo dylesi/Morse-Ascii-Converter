@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.NetworkInformation;
@@ -22,32 +22,33 @@ namespace MorseConverter
             while (onkovalmis == true)
 
             {
-                Console.WriteLine("Would you like to convert to morse or ascii?");
+                Console.WriteLine("Would you like to convert to \"morse\" or \"ascii?\" or \"exit\"?");
                 string valinta = Console.ReadLine();
 
                 if (valinta == "morse")
                 {
-                    Console.WriteLine("Input what to translate to morse");
+                    Console.WriteLine("Input what to translate to morse:");
                     string totranslate = Console.ReadLine();
                     toMorse(totranslate);
                 }
                 else if (valinta == "ascii")
                 {
-                    Console.WriteLine("Input what to translate to ascii, use \"/\" for a space");
+                    Console.WriteLine("Input what to translate to ascii, use \"/\" for a space:");
                     string totranslate = Console.ReadLine();
                     toAscii(totranslate);
                 }
+                else if (valinta == "exit")
+                {
+                    System.Environment.Exit(1);
+                }
                 else
                 {
-                    Console.Write("Not a valid choice");
+                    Console.WriteLine("Not a valid choice");
                 }
             }
-
-
-
-
             Console.ReadLine();
          }
+
 
         static void toMorse(string vastaus)
         { 
@@ -103,7 +104,7 @@ namespace MorseConverter
                 string testi = c.ToString();
                 if (morselista.TryGetValue(testi.ToUpper(), out value))
                 {
-                    lopullinenvastaus = lopullinenvastaus + value + " ";
+                    lopullinenvastaus += value + " ";
                 }
                 else
                 {
@@ -140,10 +141,10 @@ namespace MorseConverter
             morselista.Add("...-", "V");
             morselista.Add(".--", "W");
             morselista.Add("-..-", "X");
-            morselista.Add("-.--", "Y"); 
+            morselista.Add("-.--", "Y");
             morselista.Add("--..", "Z");
             morselista.Add("-----", "0");
-            morselista.Add(".----", "1"); 
+            morselista.Add(".----", "1");
             morselista.Add("..---", "2");
             morselista.Add("...--", "3");
             morselista.Add("....-", "4");
@@ -152,23 +153,23 @@ namespace MorseConverter
             morselista.Add("--...", "7");
             morselista.Add("---..", "8");
             morselista.Add("----.", "9");
-            morselista.Add(".-.-.-", "."); 
+            morselista.Add(".-.-.-", ".");
             morselista.Add("..--..", "?");
             morselista.Add("-.-.--", "!");
             morselista.Add("-...-", "-");
             morselista.Add(".-...", "&");
             morselista.Add("/", " ");
 
-            string value = "";  
+            string value = "";
             string lopullinenvastaus = "";
-            string[] morseyksikkö = vastaus.Split(' ');
+            string[] morseyksikköarray = vastaus.Split(' ');
 
-            foreach (string c in morseyksikkö)
+            foreach (string c in morseyksikköarray)
             {
                 
                 if (morselista.TryGetValue(c, out value))
                 {
-                    lopullinenvastaus = lopullinenvastaus + value;
+                    lopullinenvastaus += value;
                 }
                 else
                 {
