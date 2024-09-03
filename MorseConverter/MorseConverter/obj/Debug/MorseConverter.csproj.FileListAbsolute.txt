@@ -1,0 +1,7 @@
+C:\Users\179492\source\repos\MorseConverter\MorseConverter\bin\Debug\MorseConverter.exe.config
+C:\Users\179492\source\repos\MorseConverter\MorseConverter\bin\Debug\MorseConverter.exe
+C:\Users\179492\source\repos\MorseConverter\MorseConverter\bin\Debug\MorseConverter.pdb
+C:\Users\179492\source\repos\MorseConverter\MorseConverter\obj\Debug\MorseConverter.csproj.AssemblyReference.cache
+C:\Users\179492\source\repos\MorseConverter\MorseConverter\obj\Debug\MorseConverter.csproj.CoreCompileInputs.cache
+C:\Users\179492\source\repos\MorseConverter\MorseConverter\obj\Debug\MorseConverter.exe
+C:\Users\179492\source\repos\MorseConverter\MorseConverter\obj\Debug\MorseConverter.pdb
